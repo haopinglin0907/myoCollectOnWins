@@ -43,8 +43,10 @@ class MyGame(arcade.Window):
         self.isEnd = False
         self.isReconnect = False
         
-        self.gesture_list = ['Rest', 'Cylinder Grasp', 'Spherical Grasp','Lateral Pinch', 'Opposition']
-        self.trial_num = 0
+        self.gesture_list = ['Rest', 'Cylinder Grasp', 'Spherical Grasp','Lateral Pinch', 'Opposition']\
+            
+        self.trial_num_dict = dict(zip(['Rest', 'Cylinder Grasp', 'Spherical Grasp', 'Lateral Pinch', 'Opposition'], [1, 1, 1, 1, 1]))
+        self.trial_num = 1
 
 
     def setup(self):
@@ -85,7 +87,7 @@ class MyGame(arcade.Window):
                          arcade.color.WHITE, 15,
                          anchor_x="left")
         
-        arcade.draw_text("Right: Next Gesture",
+        arcade.draw_text("Space: Start timer for each trial (3 secs prep. / 5 secs record)",
                          20, SCREEN_HEIGHT - 50,
                          arcade.color.WHITE, 15,
                          anchor_x="left")
@@ -95,7 +97,7 @@ class MyGame(arcade.Window):
                          arcade.color.WHITE, 15,
                          anchor_x="left")
         
-        arcade.draw_text("Space: Start timer",
+        arcade.draw_text("Right: Next Gesture",
                          20, SCREEN_HEIGHT - 90,
                          arcade.color.WHITE, 15,
                          anchor_x="left")
@@ -144,7 +146,8 @@ class MyGame(arcade.Window):
                 self.isInitialize = False
                 self.total_time = 0
                 self.isRecord = False
-                self.trial_num +=1
+                self.trial_num_dict[self.gesture_list[self.current_idx]] +=1
+                self.trial_num = self.trial_num_dict[self.gesture_list[self.current_idx]]
                 
             if (~self.isRecord and self.total_time < 0):
                 self.total_time = 5.2
@@ -178,7 +181,7 @@ class MyGame(arcade.Window):
         if (key == arcade.key.RIGHT):
             if (self.current_idx < 4):
                 self.current_idx+=1
-                self.trial_num = 0
+                self.trial_num = self.trial_num_dict[self.gesture_list[self.current_idx]]
                 self.label = self.gesture_list[self.current_idx]
                 
             else:
@@ -188,7 +191,7 @@ class MyGame(arcade.Window):
         if (key == arcade.key.LEFT):
             if (self.current_idx > 0):
                 self.current_idx-=1
-                self.trial_num = 0
+                self.trial_num = self.trial_num_dict[self.gesture_list[self.current_idx]]
                 self.label = self.gesture_list[self.current_idx]
                 
             else:

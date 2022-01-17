@@ -13,10 +13,8 @@ import numpy as np
 import pandas as pd
 from serial.tools.list_ports import comports
 from periodicthread import PeriodicThread
-
 import os
 import natsort
-import arcade
 import glob2
 
 
@@ -360,8 +358,8 @@ class MyoRaw(object):
             self.mask_list.append(self.mask)
             self.mask_list.append(self.mask)
             
-            self.trial_num_list.append(self.trial_num + 1)
-            self.trial_num_list.append(self.trial_num + 1)
+            self.trial_num_list.append(self.trial_num)
+            self.trial_num_list.append(self.trial_num)
             
             self.length = len(self.emg_list)
 
