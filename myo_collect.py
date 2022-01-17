@@ -6,11 +6,9 @@ Created on Sun Aug 22 21:12:28 2021
 """
 
 import arcade
-
 import random
 import numpy as np
 from myorawfast_collect import *
-import pyglet
 
 
 SCREEN_WIDTH = 800
