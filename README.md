@@ -34,5 +34,5 @@ conda install --file requirements.txt
 1) Run "python main_collect.py", enter the subject ID (4-digits e.g. 0001) and which side
 2) Press "Up" to connect the myo to the laptop. Once it is connected, the EMG bars will be moving up and down.
 3) Press "Space" to start the timer. There are 3 seconds for preprataion (Red) and 5 seconds for recording (Green) in each trial
-4) Press "Right" if you want to change to another gesture 
+4) Press "Right" if you want to change to another gesture and "Left" to change to the previous one
 5) In the end, press "Esc" to stop the application and save the data. 
