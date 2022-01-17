@@ -88,22 +88,22 @@ class MyGame(arcade.Window):
                          anchor_x="left")
         
         arcade.draw_text("Space: Start timer for each trial (3 secs prep. / 5 secs record)",
-                         20, SCREEN_HEIGHT - 50,
-                         arcade.color.WHITE, 15,
-                         anchor_x="left")
-        
-        arcade.draw_text("Left: Last Gesture",
-                         20, SCREEN_HEIGHT - 70,
+                         20, SCREEN_HEIGHT - 55,
                          arcade.color.WHITE, 15,
                          anchor_x="left")
         
         arcade.draw_text("Right: Next Gesture",
-                         20, SCREEN_HEIGHT - 90,
+                         20, SCREEN_HEIGHT - 80,
+                         arcade.color.WHITE, 15,
+                         anchor_x="left")
+        
+        arcade.draw_text("Left: Last Gesture",
+                         20, SCREEN_HEIGHT - 105,
                          arcade.color.WHITE, 15,
                          anchor_x="left")
         
         arcade.draw_text("Esc: Disconnect Myo and save data",
-                         20, SCREEN_HEIGHT - 110,
+                         20, SCREEN_HEIGHT - 130,
                          arcade.color.WHITE, 15,
                          anchor_x="left")
         
