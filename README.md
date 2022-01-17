@@ -22,7 +22,7 @@ Create an environment with packages installation (Use requirements.txt)
 
 After installing the Anaconda, open the Anaconda Prompt and enter the following commands:
 
-conda create -name "env_name" python = 3.8.8
+conda create -n "env_name" python=3.8.8
 
 conda activate "env_name"
 
