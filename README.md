@@ -1,8 +1,8 @@
 # myoCollectOnWins
 
-Gesture data collection on windows.
+Gesture data collection on windows
 
-The keybinds to control the gesture collection app
+## The keybinds to control the gesture collection app
 
 #### Up: Connects myo armband to the PC
 
@@ -31,8 +31,8 @@ conda install --file requirements.txt
 
 ## Usage
 
-1) Run "python main_collect.py" and enter the subject ID (4-digits e.g. 0001)
+1) Run "python main_collect.py", enter the subject ID (4-digits e.g. 0001) and which side
 2) Press "Up" to connect the myo to the laptop. Once it is connected, the EMG bars will be moving up and down.
-3) Press "Space" to start the timer. There are 3 seconds for preprataion (Red) and 5 seconds for recording (Green)
+3) Press "Space" to start the timer. There are 3 seconds for preprataion (Red) and 5 seconds for recording (Green) in each trial
 4) Press "Right" if you want to change to another gesture 
 5) In the end, press "Esc" to stop the application and save the data. 
